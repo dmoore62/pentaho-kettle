@@ -23,6 +23,7 @@
 package org.pentaho.di.core;
 
 import com.google.common.util.concurrent.SettableFuture;
+import org.pentaho.di.core.annotations.OverrideStep;
 import org.pentaho.di.core.auth.AuthenticationConsumerPluginType;
 import org.pentaho.di.core.auth.AuthenticationProviderPluginType;
 import org.pentaho.di.core.compress.CompressionPluginType;
@@ -30,19 +31,7 @@ import org.pentaho.di.core.exception.KettleException;
 import org.pentaho.di.core.exception.KettlePluginException;
 import org.pentaho.di.core.lifecycle.KettleLifecycleSupport;
 import org.pentaho.di.core.logging.LogTablePluginType;
-import org.pentaho.di.core.plugins.CartePluginType;
-import org.pentaho.di.core.plugins.EnginePluginType;
-import org.pentaho.di.core.plugins.ImportRulePluginType;
-import org.pentaho.di.core.plugins.JobEntryDialogFragmentType;
-import org.pentaho.di.core.plugins.JobEntryPluginType;
-import org.pentaho.di.core.plugins.KettleLifecyclePluginType;
-import org.pentaho.di.core.plugins.LifecyclePluginType;
-import org.pentaho.di.core.plugins.PartitionerPluginType;
-import org.pentaho.di.core.plugins.PluginRegistry;
-import org.pentaho.di.core.plugins.PluginTypeInterface;
-import org.pentaho.di.core.plugins.RepositoryPluginType;
-import org.pentaho.di.core.plugins.StepDialogFragmentType;
-import org.pentaho.di.core.plugins.StepPluginType;
+import org.pentaho.di.core.plugins.*;
 import org.pentaho.di.i18n.BaseMessages;
 import org.pentaho.di.repository.IUser;
 import org.pentaho.di.repository.Repository;
@@ -113,7 +102,8 @@ public class KettleEnvironment {
       CompressionPluginType.getInstance(),
       AuthenticationProviderPluginType.getInstance(),
       AuthenticationConsumerPluginType.getInstance(),
-      EnginePluginType.getInstance()
+      EnginePluginType.getInstance(),
+      OverrideStepPluginType.getInstance()
     ), simpleJndi );
   }
 
