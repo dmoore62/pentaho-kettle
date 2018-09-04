@@ -38,10 +38,7 @@ import org.pentaho.di.core.logging.KettleLogStore;
 import org.pentaho.di.core.logging.LoggingPluginInterface;
 import org.pentaho.di.core.logging.LoggingPluginType;
 import org.pentaho.di.core.logging.Slf4jLoggingEventListener;
-import org.pentaho.di.core.plugins.DatabasePluginType;
-import org.pentaho.di.core.plugins.PluginInterface;
-import org.pentaho.di.core.plugins.PluginRegistry;
-import org.pentaho.di.core.plugins.PluginTypeInterface;
+import org.pentaho.di.core.plugins.*;
 import org.pentaho.di.core.row.value.ValueMetaPluginType;
 import org.pentaho.di.core.util.EnvUtil;
 import org.pentaho.di.i18n.BaseMessages;
@@ -81,7 +78,8 @@ public class KettleClientEnvironment {
       ValueMetaPluginType.getInstance(),
       DatabasePluginType.getInstance(),
       ExtensionPointPluginType.getInstance(),
-      TwoWayPasswordEncoderPluginType.getInstance() ) );
+      TwoWayPasswordEncoderPluginType.getInstance(),
+      OverrideStepPluginType.getInstance() ) );
   }
 
   public static synchronized void init( List<PluginTypeInterface> pluginsToLoad ) throws KettleException {

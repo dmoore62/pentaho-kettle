@@ -1,4 +1,4 @@
-package org.pentaho.di.core.annotations;
+package org.pentaho.di.core.plugins;
 
 import java.lang.annotation.*;
 

@@ -23,7 +23,6 @@
 package org.pentaho.di.core;
 
 import com.google.common.util.concurrent.SettableFuture;
-import org.pentaho.di.core.annotations.OverrideStep;
 import org.pentaho.di.core.auth.AuthenticationConsumerPluginType;
 import org.pentaho.di.core.auth.AuthenticationProviderPluginType;
 import org.pentaho.di.core.compress.CompressionPluginType;
@@ -102,8 +101,7 @@ public class KettleEnvironment {
       CompressionPluginType.getInstance(),
       AuthenticationProviderPluginType.getInstance(),
       AuthenticationConsumerPluginType.getInstance(),
-      EnginePluginType.getInstance(),
-      OverrideStepPluginType.getInstance()
+      EnginePluginType.getInstance()
     ), simpleJndi );
   }
 

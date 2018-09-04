@@ -532,6 +532,11 @@
       <version>${xmlunit.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+        <groupId>pentaho-kettle</groupId>
+        <artifactId>kettle-engine</artifactId>
+        <version>9.0.0.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>

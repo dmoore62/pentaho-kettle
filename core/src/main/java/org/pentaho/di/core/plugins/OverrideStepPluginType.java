@@ -1,6 +1,5 @@
 package org.pentaho.di.core.plugins;
 
-import org.pentaho.di.core.annotations.OverrideStep;
 import org.pentaho.di.core.exception.KettlePluginException;
 import org.pentaho.di.trans.step.StepMetaInterface;
 
