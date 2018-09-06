@@ -1,0 +1,8 @@
+<override-plugins>
+    <!-- Load nothing by default -->
+    <!-- These plugins would extend the functionality of existing step plugins -->
+    <!-- Without this placeholder, it'll bomb out -->
+    <!--<step id="HBaseInput">-->
+        <!--<classname>org.pentaho.di.engine.spark.hbase.meta.HBaseInputAELMeta</classname>-->
+    <!--</step>-->
+</override-plugins>

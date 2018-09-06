@@ -1,5 +1,6 @@
 package org.pentaho.di.core.plugins;
 
+import org.pentaho.di.core.Const;
 import org.pentaho.di.core.exception.KettlePluginException;
 import org.pentaho.di.trans.step.StepMetaInterface;
 
@@ -14,7 +15,7 @@ public class OverrideStepPluginType extends BasePluginType implements PluginType
 
   protected OverrideStepPluginType() {
     super( OverrideStep.class, "OVERRIDE_STEP", "Override step");
-    populateFolders( "overridesteps" );
+    populateFolders( "override-plugins" );
   }
 
   public static OverrideStepPluginType getInstance() {
@@ -27,6 +28,26 @@ public class OverrideStepPluginType extends BasePluginType implements PluginType
   @Override
   protected void registerXmlPlugins() throws KettlePluginException {
 
+  }
+
+  @Override
+  protected String getMainTag(){
+    return "override-plugins";
+  }
+
+  @Override
+  protected String getSubTag() {
+    return "step";
+  }
+
+  @Override
+  protected String getPath() {
+    return "./";
+  }
+
+  @Override
+  protected String getXmlPluginFile() {
+    return Const.XML_FILE_OVERRIDE_KETTLE_STEPS;
   }
 
   @Override
